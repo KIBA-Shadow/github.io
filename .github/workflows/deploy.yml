@@ -6,15 +6,24 @@ on:
       - main  # 'main' ブランチへのプッシュをトリガー
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Generate HTML for Photos
+      run: |
+        echo "<div class='gallery'>" > gallery.html
+        for file in images/*; do
+          echo "<img src='$file' alt='$(basename $file)'>" >> gallery.html
+        done
+        echo "</div>" >> gallery.html
+        sed -i '/{{PHOTOS}}/r gallery.html' index.html
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./  # このディレクトリにビルド済みサイトが格納されます
+        publish_dir: ./
