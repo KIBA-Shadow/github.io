@@ -1,0 +1,30 @@
+<!-- 例: photo1.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日記 - Photo 1</title>
+</head>
+<body>
+    <h1>日記 - Photo 1</h1>
+    <img src="images/photo1.jpg" alt="Photo 1">
+    <textarea id="diary" rows="10" cols="50" placeholder="ここに日記を書いてください"></textarea>
+    <button onclick="saveDiary()">保存</button>
+
+    <!-- コメント欄（外部サービスを利用）-->
+    <div id="comments"></div>
+
+    <script>
+        // 日記を保存する簡単なスクリプト（ローカルストレージ使用）
+        function saveDiary() {
+            const diaryText = document.getElementById('diary').value;
+            localStorage.setItem('diary_photo1', diaryText);
+            alert('日記が保存されました！');
+        }
+
+        // 保存された日記を表示
+        document.getElementById('diary').value = localStorage.getItem('diary_photo1') || '';
+    </script>
+</body>
+</html>
