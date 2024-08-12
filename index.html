@@ -57,45 +57,44 @@
         <hr>
         <p>Here are your images:</p>
         <div class="image-container">
-            <a href="IMAGE009.JPG" target="_blank"><img src="IMAGE009.JPG" alt="Image 1"></a>
-            <a href="IMAGE010.JPG" target="_blank"><img src="IMAGE010.JPG" alt="Image 2"></a>
-            <a href="IMAGE011.JPG" target="_blank"><img src="IMAGE011.JPG" alt="Image 3"></a>
-            <a href="IMAGE012.JPG" target="_blank"><img src="IMAGE012.JPG" alt="Image 4"></a>
-            <a href="IMAGE014.JPG" target="_blank"><img src="IMAGE014.JPG" alt="Image 5"></a>
-            <!-- ここに新しい画像を追加 -->
-            <a href="DSC000131.JPG" target="_blank"><img src="DSC000131.JPG
-" alt="New Image 6"></a>
-            <a href="DSC10005.JPG" target="_blank"><img src="DSC10005.JPG
-" alt="New Image 7"></a>
-            <a href="IMAGE036.JPG" target="_blank"><img src="IMAGE036.JPG
-" alt="New Image 8"></a>
-            <a href="DSC00013.JPG" target="_blank"><img src="DSC00013.JPG
-" alt="New Image 9"></a>
-            <a href="IMAGE030.JPG" target="_blank"><img src="IMAGE030.JPG
-" alt="New Image 10"></a>
-            <a href="DSC00015.jpg" target="_blank"><img src="DSC00015.jpg
-" alt="New Image 11"></a>
-            <a href="DSC00023.jpg" target="_blank"><img src="DSC00023.jpg
-" alt="New Image 12"></a>
-            <a href="IMAGE015.JPG" target="_blank"><img src="IMAGE015.JPG
-" alt="New Image 10"></a>
-            <a href="IMAGE041.JPG" target="_blank"><img src="IMAGE041.JPG
-" alt="New Image 11"></a>
-            <a href="IMAGE047.JPG" target="_blank"><img src="IMAGE047.JPG
-" alt="New Image 12"></a>
-             <a href="DSC000100.JPG" target="_blank"><img src="DSC000100.JPG
-" alt="New Image 10"></a>
-            <a href="DSC00015.JPG" target="_blank"><img src="DSC00015.JPG
-" alt="New Image 11"></a>
-            <a href="DSC00001.jpg" target="_blank"><img src="DSC00001.jpg
-" alt="New Image 12"></a>
-             <a href="DSC00001 (1).jpg" target="_blank"><img src="DSC00001 (1).jpg
-" alt="New Image 10"></a>
-            <a href="DSC00017.jpg" target="_blank"><img src="DSC00017.jpg
-" alt="New Image 11"></a>
-            <a href="DSC00024.JPG" target="_blank"><img src="DSC00024.JPG
-" alt="New Image 12"></a>
-            <!-- 必要なだけ新しい画像を追加 -->
+            <!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photo Gallery</title>
+    <style>
+        .gallery img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Photo Gallery</h1>
+    <div class="gallery"></div>
+
+    <script>
+        // imagesフォルダにある画像を表示する
+        const gallery = document.querySelector('.gallery');
+        const images = [
+            'photo1.jpg',
+            'photo2.jpg',
+            'photo3.jpg', // ここにimagesフォルダの画像ファイル名を追加していく
+            // 例: 'photo4.jpg', 'photo5.jpg', ...
+        ];
+
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = `images/${image}`;
+            imgElement.alt = image;
+            gallery.appendChild(imgElement);
+        });
+    </script>
+</body>
+</html>
+
         </div>
         <hr>
         <p>Visitor count: <img src="https://www.simplehitcounter.com/hit.php?uid=1234567&f=16777215&b=0"></p>
