@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>べるりんらいふ</title>
     <style>
         body {
@@ -57,50 +59,29 @@
         <hr>
         <p>Here are your images:</p>
         <div class="image-container">
-            <!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Photo Gallery</title>
-    <style>
-        .gallery img {
-            width: 150px;
-            height: auto;
-            margin: 10px;
-        }
-    </style>
-</head>
-<body>
-    <h1>My Photo Gallery</h1>
-    <div class="gallery"></div>
-<div class="gallery">
-    <a href="photo1.html"><img src="images/photo1.jpg" alt="Photo 1"></a>
-    <a href="photo2.html"><img src="images/photo2.jpg" alt="Photo 2"></a>
-    <!-- 他の写真も同様に -->
-</div>
-
-    <script>
-        // imagesフォルダにある画像を表示する
-        const gallery = document.querySelector('.gallery');
-        const images = [
-            'DSC00001 (1).jpg',
-            'DSC00001.jpg',
-            'DSC00009.JPG', // ここにimagesフォルダの画像ファイル名を追加していく
-            // 例: 'photo4.jpg', 'photo5.jpg', ...
-        ];
-
-        images.forEach(image => {
-            const imgElement = document.createElement('img');
-            imgElement.src = `images/${image}`;
-            imgElement.alt = image;
-            gallery.appendChild(imgElement);
-        });
-    </script>
-</body>
-</html>
-
+            <div class="gallery">
+                <a href="photo1.html"><img src="images/photo1.jpg" alt="Photo 1"></a>
+                <a href="photo2.html"><img src="images/photo2.jpg" alt="Photo 2"></a>
+                <!-- 他の写真も同様に -->
+            </div>
         </div>
+        <script>
+            // imagesフォルダにある画像を表示する
+            const gallery = document.querySelector('.gallery');
+            const images = [
+                'DSC00001 (1).jpg',
+                'DSC00001.jpg',
+                'DSC00009.JPG', // ここにimagesフォルダの画像ファイル名を追加していく
+                // 例: 'photo4.jpg', 'photo5.jpg', ...
+            ];
+
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = `images/${image}`;
+                imgElement.alt = image;
+                gallery.appendChild(imgElement);
+            });
+        </script>
         <hr>
         <p>Visitor count: <img src="https://www.simplehitcounter.com/hit.php?uid=1234567&f=16777215&b=0"></p>
         <p>Sign my <a href="#">guestbook</a>!</p>
@@ -110,4 +91,3 @@
     </div>
 </body>
 </html>
-
