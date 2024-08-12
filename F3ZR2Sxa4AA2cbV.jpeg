@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My 1990s Web Page</title>
+    <style>
+        body {
+            background-color: #FFFF00; /* 派手な背景色 */
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .content {
+            width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: #FFFFFF;
+            padding: 20px;
+            border: 1px solid #000000;
+        }
+        .navbar {
+            background-color: #0000FF;
+            padding: 10px;
+            color: #FFFFFF;
+        }
+        .footer {
+            background-color: #0000FF;
+            padding: 10px;
+            color: #FFFFFF;
+            margin-top: 20px;
+        }
+        .image-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" style="color: #FFFFFF;">Home</a> | 
+        <a href="#" style="color: #FFFFFF;">About</a> | 
+        <a href="#" style="color: #FFFFFF;">Contact</a>
+    </div>
+    <div class="content">
+        <h1>Welcome to My 1990s Web Page</h1>
+        <p>This is a sample web page that looks like it was made in the 1990s.</p>
+        <p>Here is an animated GIF:</p>
+        <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" alt="Cat" width="100">
+        <hr>
+        <p>Here are your images:</p>
+        <div class="image-container">
+            <img src="IMAGE009.JPG" alt="Image 1" width="300">
+            <img src="IMAGE010.JPG" alt="Image 2" width="300">
+            <img src="IMAGE011.JPG" alt="Image 3" width="300">
+            <img src="IMAGE012.JPG" alt="Image 4" width="300">
+            <img src="IMAGE014.JPG" alt="Image 5" width="300">
+        </div>
+        <hr>
+        <p>Visitor count: <img src="https://www.simplehitcounter.com/hit.php?uid=1234567&f=16777215&b=0"></p>
+        <p>Sign my <a href="#">guestbook</a>!</p>
+    </div>
+    <div class="footer">
+        &copy; 2024 My 1990s Web Page
+    </div>
+</body>
+</html>
+
