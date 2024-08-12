@@ -54,38 +54,25 @@
     </div>
     <div class="content">
         <h1>Hochipan & Supley GmbH</h1>
-        <p>This isn't just nostalgia—this is genuine cyberpunk resistance. To those wearing Fubu or Triple Five Soul, it's about stopping the hacking attacks on humanity through smartphones and standing against the destruction of imagination caused by high resolution and high fidelity. Without the ability to forget, the ability to truly love is lost.</p>
+        <p>Welcome to my photo gallery! Click on any photo to start writing a diary entry for it.</p>
         
         <hr>
         <p>Here are your images:</p>
         <div class="image-container">
-            <div class="gallery">
-                <a href="photo1.html"><img src="images/photo1.jpg" alt="Photo 1"></a>
-                <a href="photo2.html"><img src="images/photo2.jpg" alt="Photo 2"></a>
-                <!-- 他の写真も同様に -->
-            </div>
+            <a href="diary_photo1.html"><img src="images/photo1.jpg" alt="Photo 1"></a>
+            <a href="diary_photo2.html"><img src="images/photo2.jpg" alt="Photo 2"></a>
+            <!-- 他の写真も同様にリンクを設定 -->
         </div>
-        <script>
-            // imagesフォルダにある画像を表示する
-            const gallery = document.querySelector('.gallery');
-            const images = [
-                'DSC00001 (1).jpg',
-                'DSC00001.jpg',
-                'DSC00009.JPG', // ここにimagesフォルダの画像ファイル名を追加していく
-                // 例: 'photo4.jpg', 'photo5.jpg', ...
-            ];
-
-            images.forEach(image => {
-                const imgElement = document.createElement('img');
-                imgElement.src = `images/${image}`;
-                imgElement.alt = image;
-                gallery.appendChild(imgElement);
-            });
-        </script>
         <hr>
         <p>Visitor count: <img src="https://www.simplehitcounter.com/hit.php?uid=1234567&f=16777215&b=0"></p>
         <p>Sign my <a href="#">guestbook</a>!</p>
     </div>
+    <div class="footer">
+        &copy; 2024 My 1990s Web Page
+    </div>
+</body>
+</html>
+
     <div class="footer">
         &copy; 2024 My 1990s Web Page
     </div>
