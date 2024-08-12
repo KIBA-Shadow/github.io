@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日記 - Photo 1</title>
+</head>
+<body>
+    <h1>日記 - Photo 1</h1>
+    <img src="images/DSC00023.jpg" alt="Photo 3">
+    
+    <h2>日記を書く</h2>
+    <textarea id="diary" rows="10" cols="50" placeholder="ここに日記を書いてください"></textarea>
+    <button onclick="saveDiary()">保存</button>
+
+    <h2>コメント欄</h2>
+    <textarea id="comment" rows="5" cols="50" placeholder="ここにコメントを書いてください"></textarea>
+    <button onclick="addComment()">コメントを追加</button>
+
+    <div id="comments-section">
+        <h3>コメント一覧</h3>
+    </div>
+
+    <script>
+        // 日記を保存
+        function saveDiary() {
+            const diaryText = document.getElementById('diary').value;
+            localStorage.setItem('diary_photo1', diaryText);
+            alert('日記が保存されました！');
+        }
+
+        // コメントを追加
+        function addComment() {
+            const commentText = document.getElementById('comment').value;
+            const commentSection = document.getElementById('comments-section');
+            const newComment = document.createElement('p');
+            newComment.textContent = commentText;
+            commentSection.appendChild(newComment);
+            document.getElementById('comment').value = ''; // コメント欄をクリア
+        }
+
+        // 保存された日記を読み込む
+        document.getElementById('diary').value = localStorage.getItem('diary_photo1') || '';
+    </script>
+</body>
+</html>
